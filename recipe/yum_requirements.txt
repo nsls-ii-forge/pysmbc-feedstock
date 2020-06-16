@@ -1,1 +1,1 @@
-libsmbclient
+libsmbclient-devel
