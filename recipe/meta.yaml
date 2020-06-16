@@ -12,7 +12,10 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: |
+    export LDFLAGS=-L/usr/lib64
+    export CPPFLAGS=-I/usr/include
+    {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<36 or not linux]
 
 requirements:
@@ -26,8 +29,10 @@ requirements:
     - python
 
 test:
-  imports:
-    - smbc
+  command: |
+    export LDFLAGS=-L/usr/lib64
+    export CPPFLAGS=-I/usr/include
+    python -c 'import smbc'
 
 about:
   home: http://pypi.python.org/pypi/pysmbc
