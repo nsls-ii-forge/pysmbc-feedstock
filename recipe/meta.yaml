@@ -1,0 +1,36 @@
+{% set name = "pysmbc" %}
+{% set version = "1.0.22" %}
+{% set sha256 = "f9ce6f8cf17a2e7867b3cd87b2a47eca04ed955f37937b617088698c06177eba" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.bz2
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  host:
+    - python
+    - pip
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  run:
+    - python
+
+test:
+  imports:
+    - smbc
+
+about:
+  home: http://pypi.python.org/pypi/pysmbc
+  license: GNU GPL v2.0
+  license_file: COPYING
+  summary: libsmbclient binding for Python
+  dev_url: https://github.com/hamano/pysmbc
