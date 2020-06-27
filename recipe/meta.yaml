@@ -19,12 +19,12 @@ build:
   skip: true  # [py<36 or not linux]
 
 requirements:
-  host:
-    - python
-    - pip
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+  host:
+    - python
+    - pip
   run:
     - python
 
