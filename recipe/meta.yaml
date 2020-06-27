@@ -29,7 +29,7 @@ requirements:
     - python
 
 test:
-  command: |
+  commands: |
     export LDFLAGS=-L/usr/lib64
     export CPPFLAGS=-I/usr/include
     python -c 'import smbc'
