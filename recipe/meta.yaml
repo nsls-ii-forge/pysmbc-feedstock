@@ -1,13 +1,13 @@
 {% set name = "pysmbc" %}
-{% set version = "1.0.15.8" %}
-{% set sha256 = "0567c1789a911500b83c64becdaa0015c135cce0bcf59ec593df48859bebbf1d" %}
+{% set version = "1.0.22" %}
+{% set sha256 = "f9ce6f8cf17a2e7867b3cd87b2a47eca04ed955f37937b617088698c06177eba" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.bz2  # The extension has changed in the latest versions to .tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz   # The extension has changed in the latest versions to .tar.gz
   sha256: {{ sha256 }}
 
 build:
