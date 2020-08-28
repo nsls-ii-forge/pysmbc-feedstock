@@ -1,2 +1,2 @@
-libsmbclient
+samba-client
 libsmbclient-devel
