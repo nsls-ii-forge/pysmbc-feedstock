@@ -9,10 +9,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz   # The extension has changed in the latest versions to .tar.gz
   sha256: {{ sha256 }}
-  patches:
-    # See the bug report at https://github.com/hamano/pysmbc/issues/53 and the
-    # proposed fix in https://github.com/hamano/pysmbc/pull/54.
-    - 0001-setup.py-v1.0.22-install-issues.patch
 
 build:
   number: 0
