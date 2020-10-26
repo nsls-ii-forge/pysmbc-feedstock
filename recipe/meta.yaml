@@ -1,6 +1,6 @@
 {% set name = "pysmbc" %}
-{% set version = "1.0.22" %}
-{% set sha256 = "f9ce6f8cf17a2e7867b3cd87b2a47eca04ed955f37937b617088698c06177eba" %}
+{% set version = "1.0.23" %}
+{% set sha256 = "08db176281103024b7e8563adef733e56250051d87394c4baec4fd298d0d16f8" %}
 
 package:
   name: {{ name|lower }}
