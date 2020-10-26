@@ -5,11 +5,11 @@ Home: http://pypi.python.org/pypi/pysmbc
 
 Package license: GNU GPL v2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/pysmbc-feedstock/blob/master/LICENSE.txt)
 
 Summary: libsmbclient binding for Python
 
-
+Development: https://github.com/hamano/pysmbc
 
 Current build status
 ====================
