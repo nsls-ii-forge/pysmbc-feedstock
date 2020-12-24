@@ -1,6 +1,6 @@
 {% set name = "pysmbc" %}
-{% set version = "1.0.22" %}
-{% set sha256 = "f9ce6f8cf17a2e7867b3cd87b2a47eca04ed955f37937b617088698c06177eba" %}
+{% set version = "1.0.23" %}
+{% set sha256 = "08db176281103024b7e8563adef733e56250051d87394c4baec4fd298d0d16f8" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +9,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz   # The extension has changed in the latest versions to .tar.gz
   sha256: {{ sha256 }}
-  patches:
-    # See the bug report at https://github.com/hamano/pysmbc/issues/53 and the
-    # proposed fix in https://github.com/hamano/pysmbc/pull/54.
-    - 0001-setup.py-v1.0.22-install-issues.patch
 
 build:
   number: 0
@@ -37,7 +33,7 @@ requirements:
 # with version 4.2 which is installed at NSLS-II ISS.
 # test:
 #   imports:
-#     smbc
+#     - smbc
 
 about:
   home: http://pypi.python.org/pypi/pysmbc
